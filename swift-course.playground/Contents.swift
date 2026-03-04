@@ -239,3 +239,16 @@ func countVocal(_ text: String) {
 countVocal("Memino Trump")
 
 
+// Tuplas -> Variable similar a un array que acepta cualquier valor
+var tupla = ("Camilo", 28, true, 3200001234, "Bucaramanga")
+print(tupla.4)
+
+
+// Diccionarios -> Variable con clave y valor
+var dicc: [String: Any] = ["name": "Camilo", "age": 28, "city": "Bga"]
+var myDiccName = dicc["name"] as? String ?? "Cami"
+print(myDiccName)
+
+for (key, value) in dicc {
+    print("La clave \(key) contiene \(value)")
+}
