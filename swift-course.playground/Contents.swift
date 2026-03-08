@@ -246,9 +246,51 @@ print(tupla.4)
 
 // Diccionarios -> Variable con clave y valor
 var dicc: [String: Any] = ["name": "Camilo", "age": 28, "city": "Bga"]
-var myDiccName = dicc["name"] as? String ?? "Cami"
-print(myDiccName)
+var myDiccionaryName = dicc["name"] as? String ?? "Cami"
+print(myDiccionaryName)
 
 for (key, value) in dicc {
     print("La clave \(key) contiene \(value)")
 }
+
+
+// Nulabilidad
+var notNulabillity: String = "loquesea"
+var nullabillity: String? = nil // Cuando es opcional
+
+func exampleNil(_ text: String) {
+    print("Hola \(text)")
+}
+exampleNil(notNulabillity)
+exampleNil(nullabillity ?? "Memo")
+//exampleNil(nullabillity!) Brapear: Es el signo de admitación al final que convierte automaticamente el valor a string
+
+
+// Clases
+class Person {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    func greeting() {
+        print("Hola, soy \(name) y tengo \(age) años")
+    }
+}
+
+var personExample: Person = Person(name: "Camilo Suarez", age: 28)
+personExample.greeting()
+
+
+// Estructuras
+
+struct ExampleStruct {
+    var name: String
+    var age: Int
+}
+var exampleStruct: ExampleStruct = ExampleStruct(name: "Camilo S", age: 28)
+exampleStruct.name
+exampleStruct.age
